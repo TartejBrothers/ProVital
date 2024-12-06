@@ -453,7 +453,8 @@
     gap: 20px;
   }
   .homelifestyleheader {
-    padding: 40px 10px 20px 10px;
+    padding: 40px 20px 20px 20px;
+    justify-content: center;
   }
   .homelifestyleheaderleft p {
     font-family: Inter;
@@ -479,8 +480,8 @@
     display: none;
   }
   .homelifestylerow {
-    padding: 20px 10px;
-    scroll-padding-left: 10px;
+    padding: 20px 20px;
+    scroll-padding-left: 20px;
   }
   .lifestylecard {
     max-width: 300px;
