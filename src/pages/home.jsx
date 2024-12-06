@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../components/navbar";
 import "../styles/home.css";
 import Homeleftcolumnone from "../images/hometop/homeleftone1.jpg";
@@ -12,6 +12,15 @@ import Homerightcolumnfour from "../images/hometop/homelefttwo4.jpg";
 import Search from "../components/search";
 
 export default function Home() {
+  const [selected, setSelected] = useState(0);
+  const options = [
+    "Nutrition",
+    "Physical activity",
+    "Restorative sleep",
+    "Stress management",
+    "Social connection",
+    "Substance abuse",
+  ];
   return (
     <div className="homemain">
       <Navbar />
@@ -55,6 +64,32 @@ export default function Home() {
         </div>
       </div>
       <Search />
+      <div className="centercutline"></div>
+      <div className="homelifestyle">
+        <div className="homelifestyleheader">
+          <div className="homelifestyleheaderleft">
+            <p>HOW IT WORKS</p>
+            <h4>
+              <i>Lifestyle as medicine: </i>
+              The six pillars
+            </h4>
+          </div>
+          <div className="homelifestyleheaderright"></div>
+        </div>
+        <div className="homelifestyleoptions">
+          {options.map((option, index) => (
+            <button
+              key={index}
+              className={`homelifestyleoption ${
+                selected === index ? "buttonselected" : ""
+              }`}
+              onClick={() => setSelected(index)}
+            >
+              {option}
+            </button>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }

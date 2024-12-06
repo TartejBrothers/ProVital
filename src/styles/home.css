@@ -110,7 +110,7 @@
   max-width: 1000px;
   box-shadow: 0px 4px 31px 0px #0000001f;
   color: #8b8e9c;
-  margin: -130px auto 0px auto;
+  margin: -180px auto 0px auto;
   z-index: 100000;
   position: relative;
 }
@@ -172,4 +172,44 @@
   text-decoration-skip-ink: none;
   border: none;
   cursor: pointer;
+}
+
+.homelifestyle {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  padding-top: 40px;
+  margin-top: 10px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+.centercutline {
+  height: 48px;
+  clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
+  background: linear-gradient(282.8deg, #f0c971 11.7%, #e5688c 63.17%);
+  z-index: 100000;
+  margin-top: 30px;
+  position: relative;
+}
+
+.homelifestyleoptions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.homelifestyleoption {
+  height: 31px;
+  padding: 5px 16px;
+  border: 0.85px solid #d2d2d2;
+  border-radius: 25px;
+  background-color: #fff;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 21.28px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #707070;
 }
