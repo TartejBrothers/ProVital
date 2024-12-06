@@ -240,6 +240,7 @@
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   color: #707070;
+  transition: all 0.3s ease;
 }
 .homelifestyleoptions .buttonselected {
   color: #fff;
