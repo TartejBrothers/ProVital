@@ -178,8 +178,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding: 20px;
-  padding-top: 40px;
+  padding: 80px;
   margin-top: 10px;
   max-width: 1600px;
   margin: 0 auto;
@@ -197,6 +196,7 @@
   display: flex;
   align-items: center;
   gap: 12px;
+  flex-wrap: wrap;
 }
 .homelifestyleoption {
   height: 31px;
@@ -212,4 +212,38 @@
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   color: #707070;
+}
+.homelifestyleoptions .buttonselected {
+  color: #fff;
+  background-color: #000000;
+}
+.homelifestyleheader p {
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 21.28px;
+  letter-spacing: 0.075em;
+  text-align: left;
+  color: #707070;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.homelifestyleheader h4 i {
+  background: linear-gradient(289.5deg, #f1ca72 27.25%, #d96e6c 92.08%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+}
+.homelifestyleheader h4 {
+  font-family: Inter;
+  font-size: 28px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+
+  line-height: 37.24px;
+  text-align: left;
+  font-weight: 400;
+  text-underline-position: from-font;
+  color: #707070;
+  text-decoration-skip-ink: none;
 }
