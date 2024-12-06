@@ -178,11 +178,38 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding: 80px;
+  /* padding: 80px; */
   margin-top: 10px;
+  overflow: visible;
   max-width: 1600px;
   margin: 0 auto;
 }
+.homelifestyleheader {
+  padding: 80px 80px 00px 80px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.arrowrow {
+  gap: 14px;
+  display: flex;
+  align-items: center;
+}
+.arrowcircle {
+  width: 46px;
+  height: 46px;
+  border-radius: 100%;
+  border: 1px solid #c6c6c6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.arrowcircle svg {
+  height: 14px;
+  width: 14px;
+  color: #747474;
+}
+
 .centercutline {
   height: 48px;
   clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
@@ -196,6 +223,7 @@
   display: flex;
   align-items: center;
   gap: 12px;
+  padding: 00px 80px;
   flex-wrap: wrap;
 }
 .homelifestyleoption {
@@ -234,6 +262,13 @@
   -webkit-text-fill-color: transparent;
   font-weight: 600;
 }
+.homelifestylerow {
+  display: flex;
+
+  gap: 20px;
+  padding: 20px 80px 80px 80px;
+  overflow-x: scroll;
+}
 .homelifestyleheader h4 {
   font-family: Inter;
   font-size: 28px;
@@ -245,5 +280,82 @@
   font-weight: 400;
   text-underline-position: from-font;
   color: #707070;
+  text-decoration-skip-ink: none;
+}
+.lifestylecard {
+  box-shadow: 0px 3.39px 26.26px 0px #0000001f;
+  border-radius: 16px;
+  width: 500px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.lifestylecardtop {
+  position: relative;
+}
+.lifestylecardtop img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+.lifestylebubble {
+  position: absolute;
+  gap: 10px;
+  bottom: 16px;
+  left: 24px;
+  height: 42px;
+  padding: 8px 14px;
+  border-radius: 67px;
+  background-color: #e8e3e2;
+  display: flex;
+  align-items: center;
+}
+.lifestylebubble img {
+  height: 24px;
+}
+.lifestylebubbletext {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+}
+.lifestylebubbletext p {
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.36px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #919191;
+}
+.lifestylebubbletext h3 {
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21.78px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.lifestylecardbody {
+  padding: 24px;
+}
+.lifestylecardbody h3 {
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 26.6px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  margin-bottom: 10px;
+}
+.lifestylecardbody p {
+  font-family: Inter;
+  color: #919191;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  text-underline-position: from-font;
   text-decoration-skip-ink: none;
 }

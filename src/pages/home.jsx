@@ -10,6 +10,22 @@ import Homerightcolumntwo from "../images/hometop/homelefttwo2.jpg";
 import Homerightcolumnthree from "../images/hometop/homelefttwo3.jpg";
 import Homerightcolumnfour from "../images/hometop/homelefttwo4.jpg";
 import Search from "../components/search";
+import LifeStyleComponent from "../components/lifestylebox";
+import LifeStyleIconone from "../images/icons/lifestyleicon1.svg";
+import LifeStyleIcontwo from "../images/icons/lifestyleicon2.svg";
+import LifeStyleIconthree from "../images/icons/lifestyleicon3.svg";
+import LifeStyleIconfour from "../images/icons/lifestyleicon4.svg";
+import LifeStyleIconfive from "../images/icons/lifestyleicon5.svg";
+import LifeStyleIconsix from "../images/icons/lifestyleicon6.svg";
+
+import LifeStyleComponentImage from "../images/lifestyle/lifestyleimages1.jpg";
+import LifeStyleComponentImage2 from "../images/lifestyle/lifestyleimages2.jpg";
+import LifeStyleComponentImage3 from "../images/lifestyle/lifestyleimages3.jpg";
+import LifeStyleComponentImage4 from "../images/lifestyle/lifestyleimages4.jpg";
+import LifeStyleComponentImage5 from "../images/lifestyle/lifestyleimages5.jpg";
+import LifeStyleComponentImage6 from "../images/lifestyle/lifestyleimages6.jpg";
+
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 
 export default function Home() {
   const [selected, setSelected] = useState(0);
@@ -74,7 +90,16 @@ export default function Home() {
               The six pillars
             </h4>
           </div>
-          <div className="homelifestyleheaderright"></div>
+          <div className="homelifestyleheaderright">
+            <div className="arrowrow">
+              <div className="arrowcircle">
+                <FaArrowLeft />
+              </div>
+              <div className="arrowcircle">
+                <FaArrowRight />
+              </div>
+            </div>
+          </div>
         </div>
         <div className="homelifestyleoptions">
           {options.map((option, index) => (
@@ -88,6 +113,68 @@ export default function Home() {
               {option}
             </button>
           ))}
+        </div>
+        <div className="homelifestylerow">
+          <LifeStyleComponent
+            mainimage={LifeStyleComponentImage2}
+            icon={LifeStyleIconone}
+            bubbletextmain={"121/80"}
+            bubbletextsub={"mmHg"}
+            header={"Nutrition"}
+            content={
+              "Evidence supports the use of a whole food, plant-predominant diet to prevent, treat and reverse chronic illness."
+            }
+          />
+          <LifeStyleComponent
+            mainimage={LifeStyleComponentImage3}
+            icon={LifeStyleIconthree}
+            bubbletextmain={"32"}
+            bubbletextsub={"minutes"}
+            header={"Physical activity"}
+            content={
+              "Regular physical activity is key to managing weight, improving mental health, and reducing risk of chronic disease."
+            }
+          />
+          <LifeStyleComponent
+            mainimage={LifeStyleComponentImage4}
+            icon={LifeStyleIcontwo}
+            bubbletextmain={"8"}
+            bubbletextsub={"hours"}
+            header={"Restorative sleep"}
+            content={
+              "Consistent, quality sleep is essential for cognitive function and physical health."
+            }
+          />
+          <LifeStyleComponent
+            mainimage={LifeStyleComponentImage5}
+            icon={LifeStyleIconfour}
+            bubbletextmain={"60"}
+            bubbletextsub={"bpm"}
+            header={"Stress management"}
+            content={
+              "Effective stress management techniques are crucial for mental well-being and overall health."
+            }
+          />
+          <LifeStyleComponent
+            mainimage={LifeStyleComponentImage6}
+            icon={LifeStyleIconfive}
+            bubbletextmain={"Feeling"}
+            bubbletextsub={"better"}
+            header={"Social connection"}
+            content={
+              "Strong social connections are associated with a lower risk of many chronic diseases and enhanced mental health."
+            }
+          />
+          <LifeStyleComponent
+            mainimage={LifeStyleComponentImage}
+            icon={LifeStyleIconsix}
+            bubbletextmain={"62"}
+            bubbletextsub={"days"}
+            header={"Substance abuse"}
+            content={
+              "Avoiding tobacco, limiting alcohol use, and abstaining from harmful substances are vital for long-term health."
+            }
+          />
         </div>
       </div>
     </div>
