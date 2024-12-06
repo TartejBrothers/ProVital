@@ -47,6 +47,7 @@ export default function Home() {
 
   const handleScroll = () => {
     const scrollLeft = scrollContainerRef.current.scrollLeft;
+
     const itemWidth = 480;
     const index = Math.round(scrollLeft / itemWidth);
     setSelected(index);
@@ -55,6 +56,7 @@ export default function Home() {
   useEffect(() => {
     const container = scrollContainerRef.current;
     container.addEventListener("scroll", handleScroll);
+    console.log(container.scrollLeft);
     return () => {
       container.removeEventListener("scroll", handleScroll);
     };
