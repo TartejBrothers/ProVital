@@ -9,6 +9,7 @@ export default function Navbar() {
   const [triggerAnimation, setTriggerAnimation] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
+  const [showLogin, setShowLogin] = useState(false);
   const navigate = useNavigate();
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -60,7 +61,7 @@ export default function Navbar() {
           <li>
             <hr />
           </li>
-          <li>
+          <li onClick={() => setShowLogin(!showLogin)}>
             Login / Sign Up <IoIosArrowDown />
           </li>
         </ul>
@@ -68,6 +69,32 @@ export default function Navbar() {
       <div className="navbarrightmobile" onClick={toggleDropdown}>
         <img src={Gripline} alt="Gripline" />
       </div>
+      {showLogin && (
+        <div className="logindropdowndesktop">
+          {" "}
+          <div className="signindropdown">
+            <div className="signindropdownelement">
+              <div className="sigindropdownelementleft">
+                <h3>Doctor</h3>
+              </div>
+              <div className="sigindropdownelementright">
+                <p>Login</p>
+                <p>Sign Up</p>
+              </div>
+            </div>
+            <hr />
+            <div className="signindropdownelement">
+              <div className="sigindropdownelementleft">
+                <h3>Patients</h3>
+              </div>
+              <div className="sigindropdownelementright">
+                <p>Login</p>
+                <p>Sign Up</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
       {showDropdown && (
         <div className={`dropdown ${isAnimating ? "close" : "open"}`}>
           <div className="navbar">
