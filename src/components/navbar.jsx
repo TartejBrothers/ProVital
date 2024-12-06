@@ -4,6 +4,7 @@ import logo from "../images/logo.svg";
 import Gripline from "../images/gripline.svg";
 import { IoIosArrowDown } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
+import { FaArrowRight } from "react-icons/fa";
 export default function Navbar() {
   const [triggerAnimation, setTriggerAnimation] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
@@ -134,6 +135,36 @@ export default function Navbar() {
                   <p>Sign Up</p>
                 </div>
               </div>
+            </div>
+            <div className="dropdownmainbody">
+              <ul>
+                <li>
+                  Doctors <FaArrowRight />
+                </li>
+
+                <hr />
+
+                <li>
+                  List Your Practice <FaArrowRight />
+                </li>
+                <hr />
+                <li>
+                  For Employers <FaArrowRight />
+                </li>
+                <hr />
+                <li>
+                  Courses <FaArrowRight />
+                </li>
+                <hr />
+                <li>
+                  Books <FaArrowRight />
+                </li>
+                <hr />
+                <li>
+                  Speakers <FaArrowRight />
+                </li>
+                <hr />
+              </ul>
             </div>
           </div>
         </div>
