@@ -264,7 +264,8 @@
 }
 .homelifestylerow {
   display: flex;
-
+  scroll-snap-type: x mandatory;
+  scroll-padding-left: 80px;
   gap: 20px;
   padding: 20px 80px 80px 80px;
   overflow-x: scroll;
@@ -288,6 +289,7 @@
   width: 500px;
   flex-shrink: 0;
   overflow: hidden;
+  scroll-snap-align: start;
 }
 .lifestylecardtop {
   position: relative;

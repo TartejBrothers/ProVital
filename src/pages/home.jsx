@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Navbar from "../components/navbar";
 import "../styles/home.css";
 import Homeleftcolumnone from "../images/hometop/homeleftone1.jpg";
@@ -28,6 +28,15 @@ import LifeStyleComponentImage6 from "../images/lifestyle/lifestyleimages6.jpg";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 
 export default function Home() {
+  const scrollContainerRef = useRef(null);
+
+  const scrollLeft = () => {
+    scrollContainerRef.current.scrollBy({ left: -500, behavior: "smooth" });
+  };
+
+  const scrollRight = () => {
+    scrollContainerRef.current.scrollBy({ left: 500, behavior: "smooth" });
+  };
   const [selected, setSelected] = useState(0);
   const options = [
     "Nutrition",
@@ -92,10 +101,10 @@ export default function Home() {
           </div>
           <div className="homelifestyleheaderright">
             <div className="arrowrow">
-              <div className="arrowcircle">
+              <div className="arrowcircle" onClick={scrollLeft}>
                 <FaArrowLeft />
               </div>
-              <div className="arrowcircle">
+              <div className="arrowcircle" onClick={scrollRight}>
                 <FaArrowRight />
               </div>
             </div>
@@ -114,7 +123,7 @@ export default function Home() {
             </button>
           ))}
         </div>
-        <div className="homelifestylerow">
+        <div className="homelifestylerow" ref={scrollContainerRef}>
           <LifeStyleComponent
             mainimage={LifeStyleComponentImage2}
             icon={LifeStyleIconone}
