@@ -104,6 +104,31 @@ export default function Home() {
       </div>
       <Search />
       <div className="centercutline"></div>
+      <div className="mobileimagesrow">
+        <div className="mobileimagesrowscroll-wrapper">
+          <div className="mobileimagesrowscroll">
+            <img src={Homeleftcolumnone} alt="One" />
+            <img src={Homeleftcolumntwo} alt="Two" />
+            <img src={Homeleftcolumnthree} alt="Three" />
+            <img src={Homeleftcolumnfour} alt="Four" />
+            <img src={Homerightcolumnone} alt="One" />
+            <img src={Homerightcolumntwo} alt="Two" />
+            <img src={Homerightcolumnthree} alt="Three" />
+            <img src={Homerightcolumnfour} alt="Four" />
+          </div>
+
+          <div className="mobileimagesrowscroll">
+            <img src={Homeleftcolumnone} alt="One" />
+            <img src={Homeleftcolumntwo} alt="Two" />
+            <img src={Homeleftcolumnthree} alt="Three" />
+            <img src={Homeleftcolumnfour} alt="Four" />
+            <img src={Homerightcolumnone} alt="One" />
+            <img src={Homerightcolumntwo} alt="Two" />
+            <img src={Homerightcolumnthree} alt="Three" />
+            <img src={Homerightcolumnfour} alt="Four" />
+          </div>
+        </div>
+      </div>
       <div className="homelifestyle">
         <div className="homelifestyleheader">
           <div className="homelifestyleheaderleft">

@@ -15,7 +15,14 @@
     transform: translateY(0);
   }
 }
-
+@keyframes scroll-right {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% - 20px));
+  }
+}
 .hometop {
   display: flex;
   height: 600px;
@@ -361,4 +368,134 @@
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
+}
+.mobileimagesrow {
+  display: none;
+}
+@media screen and (max-width: 1000px) {
+  .hometop {
+    height: fit-content;
+    padding: 80px 20px 20px 20px;
+  }
+  .hometopleft {
+    display: none;
+  }
+  .hometopright {
+    width: 100%;
+  }
+  .hometopright h1 {
+    font-family: Inter;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 33.89px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  .hometopright p {
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  .searchbox {
+    margin: 0px auto;
+  }
+  .searchbox form {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .searchbox .inputdiv {
+    width: 100%;
+  }
+  .searchbox button {
+    width: 100%;
+  }
+  .centercutline {
+    margin-top: -200px;
+    z-index: 10;
+    margin-bottom: 200px;
+  }
+  .homelifestyleheaderright {
+    display: none;
+  }
+  .mobileimagesrow {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+  .mobileimagesrowscroll-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .mobileimagesrowscroll {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    animation: scroll-right 15s linear infinite;
+  }
+
+  .mobileimagesrowscroll img {
+    height: 240px;
+    width: 250px;
+    object-fit: cover;
+    border-radius: 16px;
+  }
+
+  .mobileimagesrowscroll-wrapper {
+    display: flex;
+    gap: 20px;
+  }
+  .homelifestyleheader {
+    padding: 40px 10px 20px 10px;
+  }
+  .homelifestyleheaderleft p {
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18.62px;
+    letter-spacing: 0.075em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  .homelifestyleheader h4 {
+    font-family: Inter;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 26.6px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  .homelifestyleoptions {
+    display: none;
+  }
+  .homelifestylerow {
+    padding: 20px 10px;
+    scroll-padding-left: 10px;
+  }
+  .lifestylecard {
+    max-width: 300px;
+  }
+  .lifestylecard {
+    /* height: 600px; */
+    width: 90%;
+  }
+  .lifestylecardtop img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+  }
+  .homelifestyle {
+    gap: 0px;
+  }
 }
